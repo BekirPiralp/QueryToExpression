@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Authors>Bekir PİRALP</Authors>
+    <Company>Bekir PİRALP</Company>
+    <Title>$(AssemblyName)</Title>
+    <Description>Bu paket istenilen entitiy için propertylerinde arama yapmak ve istenilen property'i query olarak almayı 
+bu sayede veritabanında rahat soru ve sıralama yapmayı sağlar</Description>
+    <Copyright>Copyright 2024</Copyright>
+    <RepositoryType>github</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp.Scripting" Version="4.9.2" />
+  </ItemGroup>
+
+</Project>
