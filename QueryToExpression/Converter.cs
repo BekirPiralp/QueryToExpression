@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 namespace QueryToExpression
 {
 	public class Converter<TEntity>
-		where TEntity : class, new()
+		where TEntity : class
 	{
 		public static async Task<Expression<Func<TEntity,bool>>> SearchExpressionConverter (string searchText, params string[] removeColums)
 		{

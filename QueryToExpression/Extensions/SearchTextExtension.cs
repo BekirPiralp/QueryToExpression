@@ -9,13 +9,13 @@ namespace QueryToExpression.Extensions
 	internal static class SearchTextExtension
 	{
 		internal static async Task<Expression<Func<TEntity,bool>>> SearchTextConverter<TEntity>(this string searchText)
-			where TEntity : class, new()
+			where TEntity : class
 		{
 			return await searchText.SearchTextConverter<TEntity>(null);
 		}
 
 		internal static async Task<Expression<Func<TEntity, bool>>> SearchTextConverter<TEntity>(this string searchText, params string[]? removeColums)
-			where TEntity : class, new()
+			where TEntity : class
 		{
 			if (searchText == null || searchText.Length <= 0 || searchText.Trim().Length <= 0)
 				throw new ArgumentNullException(nameof(searchText));

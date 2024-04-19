@@ -8,7 +8,7 @@ namespace QueryToExpression.Extensions
 	internal static class PropertyInfoExtension
 	{
 		public static async Task<Expression<Func<TEntity,object>>> SearchProperty<TEntity>(this PropertyInfo property)
-			where TEntity : class, new()
+			where TEntity : class
 		{
 			if (property == null) 
 				throw new ArgumentNullException(nameof(property));
