@@ -14,7 +14,7 @@ bu sayede veritabanında rahat soru ve sıralama yapmayı sağlar</Description>
     <RepositoryUrl>https://github.com/BekirPiralp/QueryToExpression</RepositoryUrl>
     <PackageProjectUrl>https://github.com/BekirPiralp/QueryToExpression</PackageProjectUrl>
     <PackageTags>query;convert;expression;expresion;sorgu;ceviri;çeviri;querytoexpression;QueryToExpression;query to expression; query convert to expression; query converter</PackageTags>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 

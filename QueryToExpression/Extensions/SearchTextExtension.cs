@@ -23,7 +23,7 @@ namespace QueryToExpression.Extensions
 			Type type = typeof(TEntity);
 			IEnumerable<PropertyInfo> properties = type.GetRuntimeProperties();
 
-			RemovedColums(properties, removeColums);
+			properties = RemovedColums(properties, removeColums);
 
 			string expressionString = SearchTextConvertExpression(properties, searchText);
 
@@ -37,7 +37,7 @@ namespace QueryToExpression.Extensions
 			return result;
 		}
 
-		private static void RemovedColums(IEnumerable<PropertyInfo> properties, string[]? removeColums)
+		private static IEnumerable<PropertyInfo> RemovedColums(IEnumerable<PropertyInfo> properties, string[]? removeColums)
 		{
 			if (removeColums != null && removeColums.Length > 0)
 			{
@@ -47,6 +47,7 @@ namespace QueryToExpression.Extensions
 						properties = properties.Where(P => P.Name.ToLower() != removeColum.ToLower());
 				}
 			}
+			return properties;
 		}
 
 		private static string SearchTextConvertExpression(IEnumerable<PropertyInfo> properties, string searchText)
